@@ -1,0 +1,12 @@
+name: FlashLight
+main: me.kvq.anvil.AnvilColors
+version: 1.0
+commands:
+  fl:
+    description: That command made to make this world better
+  rename:
+    description: Shane chained me. And force me to make plugins, please help!
+  addlore:
+    description: If you see this, call my wife and tell that I love her!
+  removelore:
+    description: null

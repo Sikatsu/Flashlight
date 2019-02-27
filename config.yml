@@ -1,0 +1,21 @@
+Help:
+  - '/fl'
+  - 'rename'
+  - 'addlore'
+  - 'removelore'
+Reload: '&aReloaded!'
+NoPermission: '&cNO FUCKING PERMISSION!'
+Flashlight:
+  Enable: '&aFlashlight enabled'
+  Disable: '&7Flashlight disabled'
+  Line: '==='
+Anvil:
+  PreventOtherPluginsCompatibleGlitches: true
+  Limit: 20
+Rename:
+  NoIS: '&cNo items in you hand'
+  Rename: 'Item name updated'
+  Relore: 'Item lore updated'
+  ItemBlocked: '&cBAD! Dont do that please'
+BlockedItems:
+  - APPLE
