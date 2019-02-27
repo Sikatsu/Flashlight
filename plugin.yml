@@ -3,10 +3,10 @@ main: me.kvq.anvil.AnvilColors
 version: 1.0
 commands:
   fl:
-    description: That command made to make this world better
+    description: Enable/Disable flashlight
   rename:
-    description: Shane chained me. And force me to make plugins, please help!
+    description: Rename an item
   addlore:
-    description: If you see this, call my wife and tell that I love her!
+    description: Add a lore to an item
   removelore:
-    description: null
+    description: Remove a lore from an item

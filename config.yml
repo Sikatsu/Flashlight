@@ -4,18 +4,18 @@ Help:
   - 'addlore'
   - 'removelore'
 Reload: '&aReloaded!'
-NoPermission: '&cNO FUCKING PERMISSION!'
+NoPermission: '&cYou have no permission for that!'
 Flashlight:
   Enable: '&aFlashlight enabled'
-  Disable: '&7Flashlight disabled'
+  Disable: '&cFlashlight disabled'
   Line: '==='
 Anvil:
   PreventOtherPluginsCompatibleGlitches: true
   Limit: 20
 Rename:
-  NoIS: '&cNo items in you hand'
-  Rename: 'Item name updated'
-  Relore: 'Item lore updated'
+  NoIS: '&cNo items in your hand'
+  Rename: '&aItem name updated'
+  Relore: '&aItem lore updated'
   ItemBlocked: '&cBAD! Dont do that please'
 BlockedItems:
   - APPLE
