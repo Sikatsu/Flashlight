@@ -1,7 +1,7 @@
-package me.kvq.anvil.flashlight;
+package nl.villagercraft.kvq.flashlight;
 
-import me.kvq.anvil.AnvilColors;
-import me.kvq.anvil.flashlight.Fl;
+import nl.villagercraft.kvq.FlashLight;
+import nl.villagercraft.kvq.flashlight.Fl;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -12,7 +12,7 @@ public class Reapply {
          public void run() {
             Fl.apply(p);
          }
-      }).runTaskLater(AnvilColors.p, 50L);
+      }).runTaskLater(FlashLight.p, 50L);
    }
 
    public static void b(final Player p) {
@@ -20,6 +20,6 @@ public class Reapply {
          public void run() {
             Fl.apply(p);
          }
-      }).runTaskLater(AnvilColors.p, 10L);
+      }).runTaskLater(FlashLight.p, 10L);
    }
 }

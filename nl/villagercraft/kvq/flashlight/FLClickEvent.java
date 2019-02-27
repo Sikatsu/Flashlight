@@ -1,7 +1,7 @@
-package me.kvq.anvil.flashlight;
+package nl.villagercraft.kvq.flashlight;
 
-import me.kvq.anvil.flashlight.Fl;
-import me.kvq.anvil.flashlight.Reapply;
+import nl.villagercraft.kvq.flashlight.Fl;
+import nl.villagercraft.kvq.flashlight.Reapply;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,14 +15,10 @@ public class FLClickEvent implements Listener {
 
    @EventHandler
    public void onClick(PlayerInteractEvent e) {
-      if(e.getAction() != Action.PHYSICAL) {
-         if(e.getItem() != null) {
-            if(e.getItem().getType() == Material.MILK_BUCKET && Fl.isOn(e.getPlayer())) {
-               Reapply.a(e.getPlayer());
-            }
-
-         }
+      if(e.getAction() != Action.PHYSICAL && e.getItem() != null && e.getItem().getType() == Material.MILK_BUCKET && Fl.isOn(e.getPlayer())) {
+         Reapply.a(e.getPlayer());
       }
+
    }
 
    @EventHandler

@@ -1,6 +1,6 @@
-package me.kvq.anvil;
+package nl.villagercraft.kvq;
 
-import me.kvq.anvil.AnvilColors;
+import nl.villagercraft.kvq.FlashLight;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -22,14 +22,14 @@ public class AnvilEvent implements Listener {
                return;
             }
 
-            if(AnvilColors.isBlocked(e.getCurrentItem().getType())) {
+            if(FlashLight.isBlocked(e.getCurrentItem().getType())) {
                return;
             }
 
             i = e.getCurrentItem();
             m = i.getItemMeta();
-            if(m.getDisplayName().length() > AnvilColors.p.getConfig().getInt("Anvil.Limit")) {
-               m.setDisplayName(m.getDisplayName().substring(0, AnvilColors.p.getConfig().getInt("Anvil.Limit")).replaceAll("&", "§") + "§9§0");
+            if(m.getDisplayName().length() > FlashLight.p.getConfig().getInt("Anvil.Limit")) {
+               m.setDisplayName(m.getDisplayName().substring(0, FlashLight.p.getConfig().getInt("Anvil.Limit")).replaceAll("&", "§") + "§9§0");
             } else {
                m.setDisplayName(m.getDisplayName().replaceAll("&", "§") + "§9§0");
             }
@@ -43,8 +43,8 @@ public class AnvilEvent implements Listener {
 
             i = e.getCursor();
             m = i.getItemMeta();
-            if(m.getDisplayName().length() > AnvilColors.p.getConfig().getInt("Anvil.Limit")) {
-               m.setDisplayName(m.getDisplayName().substring(0, AnvilColors.p.getConfig().getInt("Anvil.Limit")).replaceAll("&", "§").replaceAll("&9&0", ""));
+            if(m.getDisplayName().length() > FlashLight.p.getConfig().getInt("Anvil.Limit")) {
+               m.setDisplayName(m.getDisplayName().substring(0, FlashLight.p.getConfig().getInt("Anvil.Limit")).replaceAll("&", "§").replaceAll("&9&0", ""));
             } else {
                m.setDisplayName(m.getDisplayName().replaceAll("§", "&").replaceAll("&9&0", ""));
             }

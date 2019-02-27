@@ -1,5 +1,5 @@
 name: FlashLight
-main: me.kvq.anvil.AnvilColors
+main: nl.villagercraft.kvq.FlashLight
 version: 1.0
 commands:
   fl:

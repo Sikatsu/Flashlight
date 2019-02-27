@@ -1,12 +1,12 @@
-package me.kvq.anvil;
+package nl.villagercraft.kvq;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import me.kvq.anvil.AnvilEvent;
-import me.kvq.anvil.flashlight.FLClickEvent;
-import me.kvq.anvil.flashlight.Fl;
-import me.kvq.anvil.flashlight.Reapply;
+import nl.villagercraft.kvq.AnvilEvent;
+import nl.villagercraft.kvq.flashlight.FLClickEvent;
+import nl.villagercraft.kvq.flashlight.Fl;
+import nl.villagercraft.kvq.flashlight.Reapply;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -17,9 +17,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class AnvilColors extends JavaPlugin {
+public class FlashLight extends JavaPlugin {
 
-   public static AnvilColors p = null;
+   public static FlashLight p = null;
 
 
    public void onEnable() {
@@ -89,22 +89,22 @@ public class AnvilColors extends JavaPlugin {
                }
 
                p.sendMessage(this.getConfig().getString("Flashlight.Line").replaceAll("&", "§"));
-               StringBuilder var15 = new StringBuilder();
-               Iterator l = Fl.pl.iterator();
+               StringBuilder var161 = new StringBuilder();
+               Iterator var181 = Fl.pl.iterator();
 
-               while(l.hasNext()) {
-                  String var17 = (String)l.next();
-                  Player a = Bukkit.getPlayer(var17);
-                  var15.append((a == null?"§c":"§a") + var17 + " ");
+               while(var181.hasNext()) {
+                  String var12 = (String)var181.next();
+                  Player var13 = Bukkit.getPlayer(var12);
+                  var161.append((var13 == null?"§c":"§a") + var12 + " ");
                }
 
-               p.sendMessage(var15.toString());
+               p.sendMessage(var161.toString());
             } else if(args.length == 1 && args[0].equalsIgnoreCase("help")) {
-               Iterator im = this.getConfig().getStringList("Help").iterator();
+               Iterator var15 = this.getConfig().getStringList("Help").iterator();
 
-               while(im.hasNext()) {
-                  String var14 = (String)im.next();
-                  p.sendMessage(var14.replaceAll("&", "§"));
+               while(var15.hasNext()) {
+                  String var11 = (String)var15.next();
+                  p.sendMessage(var11.replaceAll("&", "§"));
                }
             } else if(args.length == 1 && args[0].equalsIgnoreCase("reload")) {
                if(!p.hasPermission("fl.admin")) {
@@ -120,26 +120,26 @@ public class AnvilColors extends JavaPlugin {
                   return false;
                }
 
-               Player is = Bukkit.getPlayer(args[0]);
-               if(Fl.isOn(is)) {
-                  Fl.toggle(is, false);
-                  is.sendMessage(this.getConfig().getString("Flashlight.Disable").replaceAll("&", "§"));
-                  p.sendMessage("§7" + is.getName() + ": " + this.getConfig().getString("Flashlight.Disable").replaceAll("&", "§"));
+               Player l1 = Bukkit.getPlayer(args[0]);
+               if(Fl.isOn(l1)) {
+                  Fl.toggle(l1, false);
+                  l1.sendMessage(this.getConfig().getString("Flashlight.Disable").replaceAll("&", "§"));
+                  p.sendMessage("§7" + l1.getName() + ": " + this.getConfig().getString("Flashlight.Disable").replaceAll("&", "§"));
                } else {
-                  Fl.toggle(is, true);
-                  is.sendMessage(this.getConfig().getString("Flashlight.Enable").replaceAll("&", "§"));
-                  p.sendMessage("§7" + is.getName() + ": " + this.getConfig().getString("Flashlight.Enable").replaceAll("&", "§"));
+                  Fl.toggle(l1, true);
+                  l1.sendMessage(this.getConfig().getString("Flashlight.Enable").replaceAll("&", "§"));
+                  p.sendMessage("§7" + l1.getName() + ": " + this.getConfig().getString("Flashlight.Enable").replaceAll("&", "§"));
                }
             }
          } else {
-            String l1;
-            int var11;
-            int var12;
-            String[] var13;
             ItemStack var16;
             ItemMeta var18;
             StringBuilder var19;
             int var21;
+            String var17;
+            int var191;
+            int var201;
+            String[] var211;
             if(cmd.getName().equalsIgnoreCase("rename")) {
                if(!p.hasPermission("rename.allow")) {
                   p.sendMessage(this.getConfig().getString("Rename.ItemBlocked").replaceAll("&", "§"));
@@ -163,15 +163,15 @@ public class AnvilColors extends JavaPlugin {
                   var18 = var16.getItemMeta();
                   var19 = new StringBuilder();
                   var21 = 0;
-                  var13 = args;
-                  var12 = args.length;
+                  var211 = args;
+                  var201 = args.length;
 
-                  for(var11 = 0; var11 < var12; ++var11) {
-                     l1 = var13[var11];
+                  for(var191 = 0; var191 < var201; ++var191) {
+                     var17 = var211[var191];
                      if(var21 == 0) {
-                        var19.append(l1.replaceAll("&", "§"));
+                        var19.append(var17.replaceAll("&", "§"));
                      } else {
-                        var19.append(" " + l1.replaceAll("&", "§"));
+                        var19.append(" " + var17.replaceAll("&", "§"));
                      }
 
                      ++var21;
@@ -206,23 +206,23 @@ public class AnvilColors extends JavaPlugin {
                   var18 = var16.getItemMeta();
                   var19 = new StringBuilder();
                   var21 = 0;
-                  var13 = args;
-                  var12 = args.length;
+                  var211 = args;
+                  var201 = args.length;
 
-                  for(var11 = 0; var11 < var12; ++var11) {
-                     l1 = var13[var11];
+                  for(var191 = 0; var191 < var201; ++var191) {
+                     var17 = var211[var191];
                      if(var21 == 0) {
-                        var19.append(l1.replaceAll("&", "§"));
+                        var19.append(var17.replaceAll("&", "§"));
                      } else {
-                        var19.append(" " + l1.replaceAll("&", "§"));
+                        var19.append(" " + var17.replaceAll("&", "§"));
                      }
 
                      ++var21;
                   }
 
-                  Object var22 = var18.hasLore()?var18.getLore():new ArrayList();
-                  ((List)var22).add(var19.toString());
-                  var18.setLore((List)var22);
+                  Object var20 = var18.hasLore()?var18.getLore():new ArrayList();
+                  ((List)var20).add(var19.toString());
+                  var18.setLore((List)var20);
                   var16.setItemMeta(var18);
                   p.setItemInHand(var16);
                   p.updateInventory();
@@ -242,8 +242,8 @@ public class AnvilColors extends JavaPlugin {
                   }
 
                   var18 = var16.getItemMeta();
-                  ArrayList var20 = new ArrayList();
-                  var18.setLore(var20);
+                  ArrayList var22 = new ArrayList();
+                  var18.setLore(var22);
                   var16.setItemMeta(var18);
                   p.setItemInHand(var16);
                   p.updateInventory();

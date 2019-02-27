@@ -1,11 +1,11 @@
-package me.kvq.anvil.flashlight;
+package nl.villagercraft.kvq.flashlight;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import me.kvq.anvil.AnvilColors;
+import nl.villagercraft.kvq.FlashLight;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -15,7 +15,7 @@ import org.bukkit.potion.PotionEffectType;
 public class Fl {
 
    public static List pl = new ArrayList();
-   public static File f = new File(AnvilColors.p.getDataFolder(), "data.da");
+   public static File f = new File(FlashLight.p.getDataFolder(), "data.da");
    public static FileConfiguration c = YamlConfiguration.loadConfiguration(f);
 
 
