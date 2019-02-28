@@ -1,8 +1,12 @@
 Help:
-  - '/fl'
-  - 'rename'
-  - 'addlore'
-  - 'removelore'
+  - '&6Flashlight commands'
+  - '&3/fl &7- Enable/Disable the flashlight'
+  - '&3/fl <playername> &7- Enable/Disable someones flashlight'
+  - '&3/fl list &7- See which players have flashlight enabled'
+  - '&6Item commands'
+  - '&3/rename &7- Rename an item in your hand'
+  - '&3/addlore &7- Add a lore to an item in your hand'
+  - '&3/removelore &7- Remove a lore from an item in your hand'
 Reload: '&aReloaded!'
 NoPermission: '&cYou have no permission for that!'
 Flashlight:
