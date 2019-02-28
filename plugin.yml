@@ -1,6 +1,6 @@
 name: FlashLight
 main: nl.villagercraft.kvq.FlashLight
-version: 1.2
+version: 1.2.1
 commands:
   fl:
     description: Enable/Disable flashlight
